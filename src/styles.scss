@@ -1,1 +1,551 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'primeng/resources/primeng.css';
+@import '@pv-frontend/pv-shared-components/resources/styles/theme.css';
+@import '@pv-frontend/pv-shared-components/resources/styles/primeflex.css';
+@import '@pv-frontend/pv-shared-components/resources/styles/custom-theme.scss';
+@import './assets/variables.scss';
+
+// TODO: upload font to s3 (@Amit to upload)
+@import url('https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css');
+
+html,
+body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  // background-color: var(--background-light-base);
+  &,
+  * {
+    font-family: 'Gilroy' !important;
+  }
+}
+
+.elevation-high-raised {
+  filter: drop-shadow(0px 24px 48px hsla(217, 56%, 17%, 0.18));
+}
+
+.custom-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-slider {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+}
+
+::ng-deep {
+  .p-panel-expanded {
+    .p-panel-header-icon img {
+      transform: rotate(180deg);
+    }
+  }
+
+  .p-button {
+    box-shadow: none !important;
+  }
+
+  .p-button:disabled {
+    background-color: var(--surface-border) !important;
+    color: var(--surface-text-muted-low-contrast) !important;
+    opacity: 1;
+  }
+
+  .p-button:disabled.p-button-text {
+    background-color: transparent !important;
+    color: var(--surface-text-muted-low-contrast) !important;
+  }
+
+  .p-button:disabled.p-button-outlined {
+    background-color: transparent !important;
+    color: var(--surface-text-muted-low-contrast) !important;
+    border-color: var(--surface-border) !important;
+  }
+
+  .pv-divider {
+    border-color: var(--brand-gray-400-low-contrast);
+  }
+
+  .p-component-overlay {
+    background-color: var(--surface-background-level1-high-contrast);
+    opacity: 0.9;
+  }
+}
+
+.form-field-input,
+.form-field__textarea {
+  appearance: none;
+  background: var(--background-light-layer-1);
+  border: 0;
+  color: #2e2e2e;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  outline: 0;
+  padding: 10px 15px 10px 10px;
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+}
+.primary-cta {
+  border-radius: 12px;
+  color: var(--surface-a);
+  background: var(--interactive-light-primary-action);
+  border: 0;
+  outline: 0;
+}
+
+.all-mob-dropdowns {
+  .md-drppicker {
+    top: 170px !important;
+  }
+
+  .md-drppicker th.month {
+    font-weight: 600;
+  }
+}
+.dropdown-menu {
+  font-size: 14px;
+  border: 0;
+}
+
+.datepicker .ngb-dp-header {
+  background-color: var(--interactive-dark-primary-action);
+}
+
+.ngb-dp-header {
+  border-bottom: 0;
+  border-radius: 0.25rem 0.25rem 0 0;
+  padding-top: 0.25rem;
+}
+
+.datepicker {
+  .ngb-dp-header {
+    background-color: var(--secblack);
+
+    .custom-select {
+      color: var(--accent);
+      background-color: var(--secblack);
+    }
+  }
+
+  .ngb-dp-weekdays {
+    background: var(--background);
+
+    .ngb-dp-weekday {
+      color: var(--accent);
+    }
+  }
+
+  .ngb-dp-week {
+    .ngb-dp-day {
+      .btn-light {
+        color: var(--accent);
+      }
+
+      .btn-light:hover {
+        color: black;
+        // background-color: #e2e6ea;
+        // border-color: #dae0e5;
+      }
+
+      .btn-light:focus {
+        color: black;
+      }
+
+      .btn-light:not(:disabled):not(.disabled):active {
+        color: black;
+      }
+
+      .bg-primary {
+        color: var(--accent) !important;
+        background-color: var(--yellow-1) !important;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+// TODO: add configs for all of these in journeys or components repo
+
+gv-search .p-dialog .p-dialog-header {
+  border-radius: 0;
+  background-color: var(--background-dark-base);
+}
+
+pv-search-bar input::placeholder {
+  color: var(--content-on-dark-medium-emphasis-500);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+pv-search-bar pv-svg-icon svg {
+  fill: var(--content-on-dark-medium-emphasis-500);
+}
+
+pv-drawer .p-sidebar-content div .user-card-container {
+  background-color: white !important;
+  border-radius: 20px;
+  border: 0;
+}
+
+.p-radiobutton .p-radiobutton-box.p-highlight {
+  border-color: var(--interactive-light-green-text) !important;
+}
+
+.p-radiobutton .p-radiobutton-box.p-highlight .p-radiobutton-icon {
+  background-color: var(--interactive-light-green-text) !important;
+}
+
+pv-button .p-element .p-button-text .p-button-label {
+  color: var(--interactive-light-green-text) !important;
+  font-weight: 600;
+}
+
+pv-increment-decrement-button
+  .pv-increment-decrement-button-container
+  .pv-inc-dec-button
+  pv-svg-icon
+  div {
+  fill: var(--interactive-light-green-text) !important;
+}
+
+gv-membership-plan div {
+  border-color: var(--interactive-light-green-text) !important;
+}
+
+gv-membership .discount-rewards-container {
+  background-color: var(--supporting-moss-100) !important;
+}
+
+.info-icon div {
+  fill: var(--interactive-light-green-text) !important;
+}
+
+.p-panel-icons button {
+  span {
+    color: var(--interactive-light-green-text) !important;
+  }
+  .chevron-down div {
+    fill: var(--interactive-light-green-text) !important;
+  }
+}
+
+.points-num {
+  color: var(--interactive-light-green-text) !important;
+}
+
+.sidebar-head {
+  border-radius: 20px 20px 0 0;
+}
+
+.p-overlaypanel {
+  border-radius: 20px !important;
+  padding: 0.25rem;
+  margin-left: -10px;
+  &:before,
+  &:after {
+    right: 28px !important;
+  }
+}
+
+.pv-card-banner .card-tag {
+  background-color: var(--supporting-amber-700) !important;
+}
+
+gv-details-panel {
+  border-radius: 20px 20px 0 0;
+  position: absolute;
+  background-color: var(--surface-a);
+  top: 20rem;
+  padding-bottom: 5rem;
+}
+
+.gv-details-panel {
+  border-radius: 20px 20px 0 0;
+}
+
+gv-details-panel p b {
+  color: var(--content-on-light-high-emphasis-850);
+  font-weight: 600;
+}
+
+.pv-offer-details .sticky-button {
+  position: fixed !important;
+  bottom: 0;
+  width: 100%;
+}
+
+pv-divider hr {
+  border-bottom: 0.6px solid var(--surface-action-icon-low-contrast-disabled) !important;
+}
+
+.p-panel {
+  border-radius: 20px;
+  box-shadow: unset;
+  .p-panel-header {
+    border-radius: 20px;
+    background-color: var(--neutrals-ivory-50) !important;
+    .p-panel-header-icon {
+      fill: var(--interactive-light-green-text) !important;
+    }
+
+    .p-panel-title {
+      text-transform: uppercase;
+      color: var(--content-on-light-high-emphasis-850);
+    }
+  }
+  .p-panel-content {
+    border-radius: 0 0 20px 20px;
+    background-color: var(--neutrals-ivory-50) !important;
+  }
+}
+
+.p-panel-expanded {
+  .p-panel-header {
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+.p-slider {
+  height: 4px !important;
+  &-handle,
+  &-range {
+    background: var(--interactive-light-green-text) !important;
+  }
+  &-range {
+    border-radius: 4px 0 0 4px;
+  }
+}
+
+.payment-method-container {
+  background-color: transparent;
+  margin: 0 !important;
+  border-radius: 0;
+}
+
+.payment-methods {
+  background-color: var(--surface-a);
+  border-radius: 20px;
+}
+
+.payments-container {
+  border: 0;
+  &:first-child {
+    border-bottom: 1px solid var(--neutrals-fog-200);
+  }
+  .coin-icon {
+    margin-bottom: 2px;
+  }
+}
+
+.payments-container input {
+  color: var(--interactive-light-green-text) !important;
+}
+
+.bill-details-container {
+  margin: 1.25rem 1rem;
+  border-radius: 20px;
+}
+
+.feedback-text-positive {
+  color: var(--supporting-moss-400);
+  flex-direction: row-reverse;
+  pv-svg-icon {
+    fill: var(--supporting-moss-400) !important;
+    margin-left: 4px;
+    margin-bottom: 2px;
+  }
+}
+
+.feedback-text-negative {
+  color: var(--feedback-background-negative-high-contrast-hover);
+  flex-direction: row-reverse;
+  pv-svg-icon {
+    fill: var(--feedback-background-negative-high-contrast-hover) !important;
+    margin-left: 4px;
+    margin-bottom: 2px;
+  }
+}
+
+.feedback-text-information {
+  color: var(--feedback-background-notice-high-contrast-hover);
+  flex-direction: row-reverse;
+  pv-svg-icon {
+    fill: var(--feedback-background-notice-high-contrast-hover) !important;
+    margin-left: 4px;
+    margin-bottom: 2px;
+  }
+}
+
+.merchant-block {
+  box-shadow: unset !important;
+}
+
+.main-container {
+  .date b {
+    font-weight: 600;
+    color: var(--content-on-light-high-emphasis-850);
+  }
+  .amount {
+    .success-txt {
+      color: var(--supporting-moss-400);
+    }
+    .success {
+      fill: var(--supporting-moss-400);
+    }
+
+    .failed-txt {
+      color: var(--feedback-background-negative-high-contrast-hover);
+    }
+    .failed {
+      fill: var(--feedback-background-negative-high-contrast-hover);
+    }
+    .warning-txt {
+      color: var(--supporting-amber-700);
+    }
+    .warning {
+      fill: var(--supporting-amber-700);
+    }
+  }
+  .benefit-title {
+    color: var(--content-on-light-high-emphasis-850);
+    font-weight: 600;
+  }
+}
+
+.voucher-container {
+  border-radius: 20px;
+  .coupon-box {
+    border-color: var(--supporting-moss-700);
+    border-radius: 20px;
+  }
+  .pv-copy-container pv-svg-icon div {
+    fill: var(--interactive-light-green-text) !important;
+  }
+  pv-svg-icon {
+    fill: var(--feedback-background-negative-high-contrast-hover) !important;
+  }
+}
+
+.billing-section {
+  color: var(--content-on-light-high-emphasis-850);
+  h3,
+  h4 {
+    font-weight: 600;
+  }
+}
+
+.order-details-panel {
+  .p-panel-header {
+    border-radius: 20px !important;
+    span {
+      font-weight: 600 !important;
+    }
+  }
+  .p-panel-content {
+    border-radius: 0 0 20px 20px !important;
+  }
+}
+
+.landing-main-container {
+  background-color: var(--background-light-base);
+  .category-box {
+    padding: 0 0.5rem !important;
+  }
+}
+
+.dropdown-points .coin-icon {
+  svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
+
+.membership-plan-container span {
+  color: var(--content-on-light-high-emphasis-850) !important;
+}
+
+.buy-now p-button button:disabled {
+  box-shadow: none !important;
+}
+ngb-datepicker.dropdown-menu {
+  z-index: 1;
+  background: var(--surface-a);
+  box-shadow: 0 4px 18px var(--surface-d);
+  padding: 0.25rem !important;
+}
+@media print {
+  // p.bodyText {font-family:georgia, times, serif;}
+  body {
+    background: white !important;
+  }
+  .container {
+    background-color: #fff;
+  }
+  .to-hide1 {
+    display: block !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .d-sm-block {
+    display: none;
+  }
+  .to-show1 {
+    display: none !important;
+  }
+}
+
+.landing-main-container
+  .p-carousel
+  .p-carousel-indicators
+  .p-carousel-indicator.p-highlight
+  button {
+  background: var(--interactive-light-primary-action) !important;
+}
+
+.landing-main-container
+  .p-carousel
+  .p-carousel-indicators
+  .p-carousel-indicator
+  button {
+  background: var(--inactive-gray) !important;
+}
+
+.pv-strikethrough:before {
+  border-color: var(--content-on-light-low-emphasis-500) !important;
+  transform: unset;
+  top: 40% !important;
+}
+
+.payments-container {
+  .font-bold {
+    font-weight: 600 !important;
+  }
+}
+
+.list-page-main {
+  background-color: var(--neutrals-fog-200) !important;
+}
+
+.profile-dropdown .sidebar-body div:last-child {
+  display: none;
+}
+
+.pv-card-section-title .pv-card-title-image {
+  display: none;
+}
+
+.info-overlay {
+  &.p-overlaypanel,
+  &.p-overlaypanel.p-overlaypanel-flipped:after,
+  &.p-overlaypanel.p-overlaypanel-flipped:before {
+    left: 23px;
+    top: 99%;
+  }
+}
+
+
+gv-landing-page {
+  pv-header {
+    display: none;
+  }
+}
