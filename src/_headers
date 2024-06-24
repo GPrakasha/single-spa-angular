@@ -3,7 +3,7 @@
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET, POST, OPTIONS
   Access-Control-Allow-Headers: Content-Type, Authorization
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://sandbox-poshvine-4f5328.netlify.app; connect-src 'self' https://sandbox-idfc.poshvine.com; img-src 'self' https://images.your-domain.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; frame-src 'self' https://sandbox-poshvine-4f5328.netlify.app;
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://pv-angular-app.netlify.app; connect-src 'self' https://sandbox-idfc.poshvine.com; img-src 'self' https://images.your-domain.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; frame-src 'self' https://pv-angular-app.netlify.app;
 
 # You can also specify specific paths
 # /api/*

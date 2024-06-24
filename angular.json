@@ -43,11 +43,11 @@
               "libraryName": "angular-app",
               "libraryTarget": "umd"
             },
-            "deployUrl": "https://sandbox-poshvine-4f5328.netlify.app/"
+            "deployUrl": "https://pv-angular-app.netlify.app/"
           },
           "configurations": {
             "production": {
-              "baseHref": "https://sandbox-poshvine-4f5328.netlify.app/",
+              "baseHref": "https://pv-angular-app.netlify.app/",
               "budgets": [
                 {
                   "type": "initial",
